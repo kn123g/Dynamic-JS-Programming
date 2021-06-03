@@ -18,13 +18,11 @@ const shortestCombiTotalInArray=(n,arr,memo ={})=>{
                 if(!(n in memo)) memo[n] = null;
             }
             else{       
-            //    if(memo[n] != null  ){
                     for(let resultElement of result){
                         if((!(n in memo)) || memo[n]=== null ) memo[n] = [];
                         combination= [...resultElement,element] ;
                         memo[n].push(combination);
                     }
-            //    }
             }
             if( element ===  arr[arr.length-1]){
                 memo ['memory:'+ n] = memo[n];
@@ -49,6 +47,6 @@ print(shortestCombiTotalInArray(7,[2,3]),7)
 //print(shortestCombiTotalInArray(7,[5,3,4,7]),7)
  //print(shortestCombiTotalInArray(7,[2,4]),7)
 // print(shortestCombiTotalInArray(8,[2,3,5]),8)
-// print(shortestCombiTotalInArray(300,[7,4]))
+// print(shortestCombiTotalInArray(100,[7,4]))
 // [4,4,4,4,4,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7
 //  ].reduce((a,b)=> a+b,0)
