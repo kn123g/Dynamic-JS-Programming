@@ -22,3 +22,7 @@ const possibleSumArray = (n,array,memo={})=>{
     return memo[key];
 }
 console.log(possibleSumArray(7,[2,3]))
+console.log(possibleSumArray(7,[5,3,4,7]))
+console.log(possibleSumArray(7,[2,4]))
+console.log(possibleSumArray(8,[2,3,5]))
+console.log(possibleSumArray(300,[7,14]))
