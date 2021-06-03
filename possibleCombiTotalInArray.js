@@ -1,4 +1,4 @@
-const shortestCombiTotalInArray=(n,arr,memo ={})=>{
+const possibleCombinations=(n,arr,memo ={})=>{
     if(('memory:'+ n) in memo ) {
         return memo['memory:'+ n];
     }
@@ -6,7 +6,7 @@ const shortestCombiTotalInArray=(n,arr,memo ={})=>{
     if(n<0) return null;
     if(n>0){
         for(let element of arr){
-            let result = shortestCombiTotalInArray(n-element,arr,memo);
+            let result = possibleCombinations(n-element,arr,memo);
            // console.log(result);
             let combination;
             if(result?.length === 0){
@@ -43,10 +43,10 @@ const print = (result,total)=>{
     else console.log(txt);
 }
 
-print(shortestCombiTotalInArray(7,[2,3]),7)
-//print(shortestCombiTotalInArray(7,[5,3,4,7]),7)
- //print(shortestCombiTotalInArray(7,[2,4]),7)
-// print(shortestCombiTotalInArray(8,[2,3,5]),8)
-// print(shortestCombiTotalInArray(100,[7,4]))
+print(possibleCombinations(7,[2,3]),7)
+//print(possibleCombinations(7,[5,3,4,7]),7)
+ //print(possibleCombinations(7,[2,4]),7)
+// print(possibleCombinations(8,[2,3,5]),8)
+// print(possibleCombinations(100,[7,4]))
 // [4,4,4,4,4,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7
 //  ].reduce((a,b)=> a+b,0)
